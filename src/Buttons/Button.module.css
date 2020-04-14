@@ -1,0 +1,45 @@
+.fBtn
+{
+   display: inline-block;
+   color: black;
+   width: 10%;
+   height: 20%;
+   position: absolute;
+   top: 20%;
+   right: 50%;
+   border-radius: 4px;
+
+}
+
+.bBtn{
+  display: inline-block;
+  width: 10%;
+  height: 20%;
+   position: absolute;
+   bottom: 20%;
+   left: 50%;
+   border-radius: 4px;
+
+}
+.lBtn{
+  display: inline-block;
+  width: 10%;
+  height: 20%;
+   position: absolute;
+   bottom: 40%;
+   left: 20%;
+   border-radius: 4px;
+}
+.rBtn{
+  display: inline-block;
+  width: 10%;
+  height: 20%;
+   position: absolute;
+   bottom: 40%;
+   right: 20%;
+   border-radius: 4px;
+}
+
+button:hover {
+  background-color: grey;
+}
