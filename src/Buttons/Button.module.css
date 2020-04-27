@@ -1,45 +1,114 @@
-.fBtn
-{
-   display: inline-block;
-   color: black;
-   width: 10%;
-   height: 20%;
-   position: absolute;
-   top: 20%;
-   right: 50%;
-   border-radius: 4px;
-
-}
-
-.bBtn{
+.fBtn {
   display: inline-block;
-  width: 10%;
-  height: 20%;
-   position: absolute;
-   bottom: 20%;
-   left: 50%;
-   border-radius: 4px;
-
-}
-.lBtn{
-  display: inline-block;
-  width: 10%;
-  height: 20%;
-   position: absolute;
-   bottom: 40%;
-   left: 20%;
-   border-radius: 4px;
-}
-.rBtn{
-  display: inline-block;
-  width: 10%;
-  height: 20%;
-   position: absolute;
-   bottom: 40%;
-   right: 20%;
-   border-radius: 4px;
+  padding: 15px 25px;
+  font-size: 4rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: fixed;
+  top: 20%;
+  left: 40%;
 }
 
-button:hover {
+.bBtn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 4rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: fixed;
+  top: 60%;
+  left: 40%;
+
+}
+.lBtn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 4rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: fixed;
+  top: 40%;
+  left: 60%;
+}
+.rBtn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 4rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: fixed;
+  top: 40%;
+  left: 80%;
+}
+
+
+button:active {
   background-color: grey;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.buttonDiv{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .lBtn {
+    position: fixed;
+    left:40%;
+    top:60%;
+
+  }
+  .rBtn {
+    position: fixed;
+    right:0%;
+    top:60%;
+  }
+  .bBtn {
+    position: fixed;
+    left:0%;
+    top:80%;
+  }
+  .fBtn {
+    position: fixed;
+    left:0%;
+    top:40%;
+  }
+
+
 }
