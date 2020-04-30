@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styles from "../Buttons/Button.module.css";
-import DeviceOrientation from "../DeviceOrientation/DeviceOrientation";
 class Buttons extends Component {
   handleFoward = async (url = "", data = {}) => {
     console.log(this.props.ipAddress);
@@ -88,9 +87,6 @@ class Buttons extends Component {
           >
             &#x21e8;
           </button>
-        </div>
-        <div id="root">
-          <DeviceOrientation></DeviceOrientation>
         </div>
       </div>
     );

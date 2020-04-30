@@ -1,39 +1,37 @@
-import { Component } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 
-export default class DeviceOrientation extends Component {
-  static propTypes = {
-    children: PropTypes.func,
-  };
-
-  static defaultProps = {
-    children: () => null,
-  };
-
-  state = {
-    absolute: true,
-    alpha: 0,
-    beta: 0,
-    gamma: 0,
-  };
+class DeviceOrientation extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      absolute: null,
+      alpha: null,
+      beta: null,
+      gamma: null,
+    };
+  }
 
   handleOrientation = (event) => {
     const { absolute, alpha, beta, gamma } = event;
-
-    this.setState({ absolute, alpha, beta, gamma });
+    this.setState({
+      absolute,
+      alpha,
+      beta,
+      gamma,
+    });
   };
 
   componentDidMount() {
-    window.addEventListener("deviceorientation", this.handleOrientation, true);
-    document.write( `Absolute: ${this.state.absolute}`)
-    document.write(`Alpha: ${this.state.alpha}`)
-    document.write( `Beta: ${this.state.beta}`)
-    document.write(`Gamma: ${this.state.gamma}`)
+    window.addEventListener("deviceorientation", this.handleOrientation);
   }
-
-  
 
   render() {
-    return this.props.children(this.state)
+    return <div>
+      <p>Absolute: {this.state.absolute}</p>
+      <p>Alpha: {this.state.alpha}</p>
+      <p>Beta: {this.state.beta}</p>
+      <p>Gamma: {this.state.gamma}</p>
+    </div>;
   }
 }
+export default DeviceOrientation;

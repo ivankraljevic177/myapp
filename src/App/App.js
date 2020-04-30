@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from "./App.module.css";
 import Buttons from "../Buttons/Buttons";
 import Address from "../Address/Address";
+import DeviceOrientation from "../DeviceOrientation/DeviceOrientation";
 
 class App extends Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class App extends Component {
             onHandleSubmitIp={this.handleSubmitIp}
           />
           <Buttons ipAddress={this.state.ipAdress} />
+          <DeviceOrientation></DeviceOrientation>
         </div>
       </div>
     );
